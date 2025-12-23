@@ -1,7 +1,7 @@
 :root {
-    --white: #FFFFFF;  
-    --black: #111111;   
-    --moss: #556B2F;    
+    --white: #FFFFFF;
+    --black: #111111;
+    --moss: #556B2F;
     --gray: #f4f4f4;
 }
 
@@ -27,30 +27,40 @@ header {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 2px solid var(--moss); 
+    border-right: 2px solid var(--moss);
     width: 0;
-    animation: 
+    animation:
         typing-smooth 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards,
         blink-caret 0.8s step-end 5,
         hide-cursor 0s forwards 4s;
 }
 
 @keyframes typing-smooth {
-    from { 
-        width: 0; 
+    from {
+        width: 0;
     }
-    to { 
-        width: 100%; 
+
+    to {
+        width: 100%;
     }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: var(--moss); }
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--moss);
+    }
 }
 
 @keyframes hide-cursor {
-    to { border-color: transparent; }
+    to {
+        border-color: transparent;
+    }
 }
 
 .tagline {
@@ -66,187 +76,196 @@ header {
     font-weight: 700;
 }
 
-nav ul { 
-    display: flex; 
-    list-style: none; 
-    gap: 30px; 
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
-nav a { 
-    text-decoration: none; 
-    color: var(--black); 
-    font-size: 0.8rem; 
-    font-weight: 600; 
-    text-transform: uppercase; 
-    transition: 0.3s; 
+nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-nav a:hover, nav a.active {
-     color: var(--moss); 
+nav a:hover,
+nav a.active {
+    color: var(--moss);
 }
 
-.grid-container { 
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 15px; 
-    padding: 0 10%; 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10%;
 }
 
-.work-item { 
-    position: relative; 
-    overflow: hidden; 
-    background: var(--black); 
-    aspect-ratio: 16/9; 
+.work-item {
+    position: relative;
+    overflow: hidden;
+    background: var(--black);
+    aspect-ratio: 16/9;
 }
 
-.work-item.large { 
-    grid-column: span 2; 
+.work-item.large {
+    grid-column: span 2;
 }
 
-.work-item img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    opacity: 0.8; 
-    transition: 0.6s ease; 
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.6s ease;
 }
 
-.work-item:hover img { 
-    transform: scale(1.03); opacity: 0.5; 
+.work-item:hover img {
+    transform: scale(1.03);
+    opacity: 0.5;
 }
 
 .overlay {
-    position: absolute; 
-    bottom: 30px; 
-    left: 30px; 
-    z-index: 2; 
-    opacity: 0; 
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 2;
+    opacity: 0;
     transition: 0.4s;
 }
 
-.work-item:hover .overlay { 
-    opacity: 1; 
+.work-item:hover .overlay {
+    opacity: 1;
 }
 
-.overlay h3 { 
-    color: white; 
-    font-size: 1.5rem; 
+.overlay h3 {
+    color: white;
+    font-size: 1.5rem;
 }
 
-.overlay p { 
-    color: var(--moss); 
-    font-weight: bold; 
-    font-size: 0.7rem; 
-    text-transform: uppercase; 
+.overlay p {
+    color: var(--moss);
+    font-weight: bold;
+    font-size: 0.7rem;
+    text-transform: uppercase;
 }
 
-.about-section { 
-    padding: 120px 10%; 
-    background: var(--gray); 
-    margin-top: 100px; 
+.about-section {
+    padding: 120px 10%;
+    background: var(--gray);
+    margin-top: 100px;
 }
 
 .about-grid {
-     display: grid; 
-     grid-template-columns: 1fr 1fr; 
-     gap: 80px; 
-     align-items: center; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
 }
 
 .about-image img {
-     width: 100%; 
-     filter: grayscale(100%); 
-     transition: 0.5s; 
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 0.5s;
 }
 
-.about-image img:hover { 
-    filter: grayscale(0%); 
+.about-image img:hover {
+    filter: grayscale(0%);
 }
 
 .about-text .label {
-     color: var(--moss); 
-     font-weight: 700; 
-     font-size: 0.8rem; 
-     letter-spacing: 3px; 
+    color: var(--moss);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
 }
 
-.about-text h2 { 
-    font-size: 3rem; 
-    font-weight: 900; 
-    line-height: 1.1; 
-    margin: 20px 0; 
+.about-text h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 20px 0;
 }
 
-.about-text p { 
-    margin-bottom: 20px; 
-    color: #555; 
+.about-text p {
+    margin-bottom: 20px;
+    color: #555;
 }
 
 .contact-section {
-     padding: 150px 10%; 
-     text-align: center; 
-     background: var(--white); 
+    padding: 150px 10%;
+    text-align: center;
+    background: var(--white);
 }
 
 .contact-section h2 {
-     font-size: 4rem; 
-     font-weight: 900; 
-     letter-spacing: -2px; 
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -2px;
 }
 
-.contact-section h2 span { 
-    color: var(--moss); 
+.contact-section h2 span {
+    color: var(--moss);
 }
 
 .contact-actions {
-     margin-top: 50px; 
-     display: flex; 
-     flex-direction: column; 
-     align-items: center; 
-     gap: 20px; 
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-.email-link { 
-    font-size: 1.5rem; 
-    color: var(--black); 
-    text-decoration: none; 
-    border-bottom: 2px solid var(--moss); 
+.email-link {
+    font-size: 1.5rem;
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 2px solid var(--moss);
 }
 
 .whatsapp-btn {
-    background: var(--black); color: white; padding: 20px 40px; text-decoration: none; 
-    font-weight: bold; border-radius: 0; transition: 0.3s;
-}
-.whatsapp-btn:hover { 
-    background: var(--moss); 
+    background: var(--black);
+    color: white;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0;
+    transition: 0.3s;
 }
 
-.btn-moss{
+.whatsapp-btn:hover {
+    background: var(--moss);
+}
+
+.btn-moss {
     background: var(--moss) !important;
     color: white !important;
     padding: 12px 25px;
-    border-radius: 2px; 
+    border-radius: 2px;
 }
 
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
-    z-index: 9999;
+    z-index: 10000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.95);
+    background-color: rgba(0, 0, 0, 0.98);
     align-items: center;
     justify-content: center;
+    touch-action: none;
 }
 
 .modal-content {
-    width: 90%;
-    max-width: 1100px;
+    width: 95%;
+    max-width: 1200px;
     background: #000;
     position: relative;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    aspect-ratio: 16 / 9;
 }
 
 .close-modal {
@@ -254,10 +273,12 @@ nav a:hover, nav a.active {
     top: -50px;
     right: 0;
     color: var(--white);
-    font-size: 40px;
-    font-weight: 300;
+    font-size: 45px;
+    line-height: 1;
     cursor: pointer;
-    transition: 0.3s;
+    padding: 15px;
+    z-index: 10001;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .close-modal:hover {
@@ -275,13 +296,13 @@ nav a:hover, nav a.active {
     transform: translateX(-50%);
     width: 90%;
     max-width: 800px;
-    background: var(--black); 
-    color: var(--white); 
+    background: var(--black);
+    color: var(--white);
     padding: 25px;
     z-index: 10001;
-    display: none; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border-left: 5px solid var(--moss); 
+    display: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid var(--moss);
 }
 
 .cookie-content {
@@ -326,25 +347,37 @@ nav a:hover, nav a.active {
     opacity: 0.8;
 }
 
-footer { 
-    padding: 50px 10%; 
-    text-align: center; 
-    font-size: 0.7rem; 
-    color: #999; 
-    text-transform: uppercase; 
+footer {
+    padding: 50px 10%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #999;
+    text-transform: uppercase;
 }
 
 @media (max-width: 992px) {
     header {
         padding: 40px 5%;
     }
+
     .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 }
 
-/* Ajustes específicos para Celulares (iPhone 12 Mini, etc) */
+@media (max-height: 500px) {
+    .modal-content {
+        width: auto;
+        height: 80%;
+    }
+
+    .close-modal {
+        top: 0;
+        right: -60px;
+    }
+}
+
 @media (max-width: 480px) {
     header {
         padding: 30px 5%;
@@ -354,29 +387,29 @@ footer {
     }
 
     .logo {
-        font-size: 1.5rem; /* Ajuste para caber em telas estreitas */
+        font-size: 1.5rem;
     }
 
-    /* MANTENDO O GRID ORIGINAL (2 COLUNAS) */
+
     .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* Força as 2 colunas */
-        gap: 8px; /* Reduz o espaço entre itens para ganhar área útil */
-        padding: 0 3%; /* Margens menores para aproveitar a tela */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 0 3%;
     }
 
     .work-item.large {
-        grid-column: span 2; /* O item grande continua ocupando as duas colunas */
+        grid-column: span 2;
     }
 
     .overlay h3 {
-        font-size: 0.9rem; /* Reduz o texto do overlay para não sobrecarregar a imagem pequena */
+        font-size: 0.9rem;
     }
 
     .overlay p {
         font-size: 0.5rem;
     }
 
-    /* Seção Sobre */
+
     .about-section {
         padding: 60px 8%;
         margin-top: 30px;
@@ -386,13 +419,13 @@ footer {
         font-size: 2rem;
     }
 
-    /* Seção Contato: Sem cortes */
+
     .contact-section {
         padding: 80px 5%;
     }
 
     .contact-section h2 {
-        font-size: 1.8rem; /* Tamanho otimizado para iPhone 12 Mini */
+        font-size: 1.8rem;
         line-height: 1.1;
     }
 
@@ -407,7 +440,7 @@ footer {
         font-size: 0.8rem;
     }
 
-    /* Banner de Cookies */
+
     .cookie-container {
         bottom: 0;
         left: 0;
