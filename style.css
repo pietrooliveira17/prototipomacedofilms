@@ -299,33 +299,34 @@ nav a.active {
 #vimeo-player-container {
     width: 100%;
     position: relative;
-    background: #000; /* Fundo preto enquanto carrega */
+    background: #000; 
 }
 
-/* Força o iframe a ocupar todo o espaço do modal */
 .modal-content iframe {
     border: none;
 }
 
 .cookie-container {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    max-width: 800px;
+    width: 95%; 
+    max-width: 1000px; 
     background: var(--black);
     color: var(--white);
-    padding: 25px;
+    padding: 20px;
     z-index: 10001;
     display: none;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-left: 5px solid var(--moss);
 }
 
 .cookie-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -333,11 +334,13 @@ nav a.active {
     font-size: 0.85rem;
     line-height: 1.5;
     margin: 0;
+    flex: 1; 
 }
 
 .cookie-buttons {
     display: flex;
     gap: 15px;
+    white-space: nowrap; 
 }
 
 .cookie-btn {
@@ -384,6 +387,23 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .cookie-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cookie-btn {
+        flex: 1; 
+        padding: 12px 10px;
+    }
+}
+
 @media (max-height: 500px) {
     .modal-content {
         width: auto;
@@ -393,6 +413,14 @@ footer {
     .close-modal {
         top: 0;
         right: -60px;
+    }
+
+        .cookie-container {
+        bottom: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        padding: 15px;
     }
 }
 
@@ -458,12 +486,10 @@ footer {
         font-size: 0.8rem;
     }
 
-
-    .cookie-container {
+.cookie-container {
         bottom: 0;
-        left: 0;
-        transform: none;
         width: 100%;
-        padding: 15px;
+        border-radius: 0;
     }
+
 }
