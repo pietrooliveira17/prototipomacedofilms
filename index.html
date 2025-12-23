@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MACEDO FILMS | Audiovisual & Marketing</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo">MACEDO FILMS<span>.</span></div>
+            <div class="tagline">PRODUÇÃO AUDIOVISUAL E <span>MARKETING</span></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#trabalhos">Trabalhos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato" class="btn-moss">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="trabalhos">
+        <div class="grid-container">
+            <div class="work-item large vimeo-trigger" data-vimeo-id="1125255622">
+                <div class="overlay"><h3>Viviane Machado - Estética</h3><p>Produção e Direção de Imagem</p></div>
+                <img src="imgs/vivianemachado.jpg">
+            </div>
+            
+            <div class="work-item vimeo-trigger" data-vimeo-id="1147851744">
+                <div class="overlay"><h3>Brand Identity - Fio do Bigode</h3><p>Marketing</p></div>
+                <img src="imgs/fiodobigode.jpg">
+            </div>
+
+            <div class="work-item vimeo-trigger" data-vimeo-id="1106079191">
+                <div class="overlay"><h3>Wedding Maria Eduarda e Rafael</h3><p>Filmmaking</div>
+                <img src="imgs/wedding1.jpg">
+            </div>
+        </div>
+    </section>
+
+    <div id="videoModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <div id="vimeo-player-container" style="padding:56.25% 0 0 0;position:relative;">
+                </div>
+        </div>
+    </div>
+
+    <section id="sobre" class="about-section">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="imgs/identidadevisual.png" alt="Owner">
+            </div>
+            <div class="about-text">
+                <span class="label">Macedo Films</span>
+                <h2>ART DIRECTION <br>FILMMAKING</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+        <div class="contact-content">
+            <h2>VAMOS CRIAR ALGO <br><span>MEMORÁVEL?</span></h2>
+            <div class="contact-actions">
+                <a href="mailto:producaomacedofilms@gmail.com" class="email-link">producaomacedofilms@gmail.com</a>
+                <a href="https://wa.me/11932668079" class="whatsapp-btn">FALAR NO WHATSAPP</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MACEDO FILMS. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="script.js"></script>
+
+    <div id="cookie-banner" class="cookie-container">
+    <div class="cookie-content">
+        <p>Utilizamos cookies e tecnologias semelhantes para entender como você interage com nosso portfólio e melhorar sua experiência. Ao clicar em "Aceitar", você concorda com nosso uso de ferramentas de marketing e análise.</p>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()" class="cookie-btn accept">ACEITAR</button>
+            <button onclick="document.getElementById('cookie-banner').style.display='none'" class="cookie-btn simple">RECUSAR</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
