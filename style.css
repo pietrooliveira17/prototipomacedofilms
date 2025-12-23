@@ -334,9 +334,85 @@ footer {
     text-transform: uppercase; 
 }
 
-@media (max-width: 768px) {
-    .about-grid { grid-template-columns: 1fr; }
-    .contact-section h2 { font-size: 2.5rem; }
-    header { flex-direction: column; gap: 30px; text-align: center; }
-    .cookie-container { bottom: 0; width: 75%; border-radius: 0; }
-}   
+@media (max-width: 992px) {
+    header {
+        padding: 40px 5%;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+/* Ajustes específicos para Celulares (iPhone 12 Mini, etc) */
+@media (max-width: 480px) {
+    header {
+        padding: 30px 5%;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Ajuste para caber em telas estreitas */
+    }
+
+    /* MANTENDO O GRID ORIGINAL (2 COLUNAS) */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Força as 2 colunas */
+        gap: 8px; /* Reduz o espaço entre itens para ganhar área útil */
+        padding: 0 3%; /* Margens menores para aproveitar a tela */
+    }
+
+    .work-item.large {
+        grid-column: span 2; /* O item grande continua ocupando as duas colunas */
+    }
+
+    .overlay h3 {
+        font-size: 0.9rem; /* Reduz o texto do overlay para não sobrecarregar a imagem pequena */
+    }
+
+    .overlay p {
+        font-size: 0.5rem;
+    }
+
+    /* Seção Sobre */
+    .about-section {
+        padding: 60px 8%;
+        margin-top: 30px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    /* Seção Contato: Sem cortes */
+    .contact-section {
+        padding: 80px 5%;
+    }
+
+    .contact-section h2 {
+        font-size: 1.8rem; /* Tamanho otimizado para iPhone 12 Mini */
+        line-height: 1.1;
+    }
+
+    .email-link {
+        font-size: 1rem;
+        word-break: break-all;
+    }
+
+    .whatsapp-btn {
+        padding: 15px 20px;
+        width: 75%;
+        font-size: 0.8rem;
+    }
+
+    /* Banner de Cookies */
+    .cookie-container {
+        bottom: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        padding: 15px;
+    }
+}
