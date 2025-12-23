@@ -296,6 +296,17 @@ nav a.active {
     cursor: pointer;
 }
 
+#vimeo-player-container {
+    width: 100%;
+    position: relative;
+    background: #000; /* Fundo preto enquanto carrega */
+}
+
+/* Força o iframe a ocupar todo o espaço do modal */
+.modal-content iframe {
+    border: none;
+}
+
 .cookie-container {
     position: fixed;
     bottom: 30px;
