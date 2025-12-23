@@ -5,35 +5,36 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeBtn = document.querySelector('.close-modal');
 
         triggers.forEach(trigger => {
-            const openVideo = function() {
+            trigger.addEventListener('click', function() {
                 const vimeoId = this.getAttribute('data-vimeo-id');
                 container.innerHTML = `
-                    <iframe src="https://player.vimeo.com/video/${vimeoId}?autoplay=1&color=556B2F&dnt=1" 
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                            frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-                    </iframe>`;
+                    <div class="vimeo-wrapper">
+                        <iframe src="https://player.vimeo.com/video/${vimeoId}?autoplay=1&color=556B2F&dnt=1" 
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                        </iframe>
+                    </div>`;
                 modal.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
-            };
-
-            trigger.addEventListener('click', openVideo);
+            });
         });
 
         const closeModal = (e) => {
-            if (e) e.preventDefault();
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
             modal.style.display = 'none';
             container.innerHTML = ''; 
             document.body.style.overflow = 'auto';
         };
 
-        closeBtn.addEventListener('click', closeModal);
-        closeBtn.addEventListener('touchstart', closeModal);
+        closeBtn.addEventListener('pointerdown', closeModal);
 
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
-        modal.addEventListener('touchstart', (e) => {
-            if (e.target === modal) closeModal();
+        modal.addEventListener('pointerdown', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
         });
     });
 

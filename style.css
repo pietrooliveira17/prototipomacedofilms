@@ -247,38 +247,45 @@ nav a.active {
 }
 
 .modal {
-    display: none;
+    display: none; 
     position: fixed;
     z-index: 10000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.98);
+    background-color: rgba(0,0,0,0.98);
     align-items: center;
     justify-content: center;
-    touch-action: none;
+    touch-action: none; 
 }
 
 .modal-content {
     width: 95%;
-    max-width: 1200px;
-    background: #000;
+    max-width: 1100px;
     position: relative;
     aspect-ratio: 16 / 9;
+    pointer-events: auto; 
+}
+
+.vimeo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .close-modal {
     position: absolute;
-    top: -50px;
-    right: 0;
+    top: -60px; 
+    right: 10px;
     color: var(--white);
-    font-size: 45px;
+    font-size: 50px;
     line-height: 1;
     cursor: pointer;
-    padding: 15px;
-    z-index: 10001;
-    -webkit-tap-highlight-color: transparent;
+    padding: 20px; 
+    z-index: 10002;
+    -webkit-tap-highlight-color: rgba(255,255,255,0.2);
 }
 
 .close-modal:hover {
